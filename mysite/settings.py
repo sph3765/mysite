@@ -27,7 +27,7 @@ SECRET_KEY = 'pngpmnw7o_%@zl#890rr(a_*3%u0m2(@m1r2p1r$6u-!4ecur='
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://limitless-springs-45248.herokuapp.com/'
+    'limitless-springs-45248.herokuapp.com', 
 ]
 
 
