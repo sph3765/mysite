@@ -26,7 +26,9 @@ SECRET_KEY = 'pngpmnw7o_%@zl#890rr(a_*3%u0m2(@m1r2p1r$6u-!4ecur='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://limitless-springs-45248.herokuapp.com/'
+]
 
 
 # Application definition
