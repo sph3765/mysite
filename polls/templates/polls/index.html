@@ -16,6 +16,7 @@
 
 <h2>Employee Form</h2>
 <form action="{% url 'polls:addEmployee' %}" method="POST">
+{% csrf_token %}
     First Name: <input type="text" name="firstname">
     <br>
     Last Name: <input type="text" name="lastname"> 
