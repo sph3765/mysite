@@ -6,15 +6,20 @@ from django.urls import reverse
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    
+    latest_employee_list = Employee.objects.all(); 
     context = {
         'latest_question_list': latest_question_list,
+        'latest_employee_list' : latest_employee_list, 
     }
     return render(request, 'polls/index.html', context)
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id) 
     return render(request, 'polls/detail.html', {'question':question})
+
+def detailEmployee(request, employee_id):
+    employee = get_object_or_404(Employee, pk=employee_id)
+    return render(request, 'polls/detailEmployee.html', {'employee': employee})
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

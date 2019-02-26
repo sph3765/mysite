@@ -20,3 +20,11 @@ class Choice(models.Model):
 
   def __str__(self):
     return self.choice_text
+
+
+class Employee(models.Model):
+    firstName = models.CharField(max_length=200)
+    lastName = models.CharField(max_length=200)
+
+    def __str__(self):
+      return self.firstName + " " + self.lastName
