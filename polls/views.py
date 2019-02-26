@@ -52,4 +52,4 @@ def addEmployee(request):
         'latest_question_list': latest_question_list,
         'latest_employee_list' : latest_employee_list, 
     }
-    return render(request, 'polls/index.html', context)
+    return HttpResponseRedirect(reverse('polls:index'))
