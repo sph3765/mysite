@@ -7,7 +7,7 @@ urlpatterns = [
     # ex: /polls/5/
     path('<int:question_id>/', views.detail, name='detail'),
     #ex: /1/
-    path('<int:employee_id>/', views.detailEmployee, name='detailEmployee')
+    path('<int:employee_id>/', views.detailEmployee, name='detailEmployee'), 
     # ex: /polls/5/results/
     path('<int:question_id>/results/', views.results, name='results'),
     # ex: /polls/5/vote/
