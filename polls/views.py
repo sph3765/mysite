@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from .models import Question 
 from django.template import loader 
-from djano.shortcuts import render 
+from django.shortcuts import render 
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
