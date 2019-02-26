@@ -1,7 +1,7 @@
 <h1>Viewing Employee</h1> 
 <h2>{{ employee.firstName }}</h2>
 <h3>Put in Department</h3>
-<form action="#" method="POST"> 
+<form action="{% url 'polls:addDepartment' %}" method="POST">
 {% csrf_token %}
   Department Name: <input type="text" name="departmentName"/>
   <input type="submit" value="Submit">
