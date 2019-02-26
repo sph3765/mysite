@@ -15,7 +15,7 @@
 {% endif %}
 
 <h2>Employee Form</h2>
-<form action="{% url 'polls:addEmployee' firstname, lastname %}" method="POST">
+<form action="{% url 'polls:addEmployee' %}" method="POST">
     First Name: <input type="text" name="firstname">
     <br>
     Last Name: <input type="text" name="lastname"> 

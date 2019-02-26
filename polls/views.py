@@ -44,6 +44,8 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 def addEmployee(request, passedFN, passedLN):
+    passedFN = request.POST.get("firstname")
+    passedLN = request.POST.get("lastname")
     newEmployee = Employee(firstName=passedFN, lastName=passedLN)
     newEmployee.save()
 
