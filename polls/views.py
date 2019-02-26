@@ -44,7 +44,7 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 def addEmployee(request, passedFirstName, passedLastName):
-    newEmployee = Employee(firstName=passedFirstName, lastName=passedLastName)
+    newEmployee = Employee(firstName="default", lastName="default")
     newEmployee.save()
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     latest_employee_list = Employee.objects.all(); 
