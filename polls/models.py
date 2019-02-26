@@ -28,3 +28,9 @@ class Employee(models.Model):
 
     def __str__(self):
       return self.firstName + " " + self.lastName
+
+class Department(models.Model):
+    departName = models.CharField(max_length=200)
+    employees = models.ManyToManyField(Employee)
+    def __str__(self):
+      return self.departName
