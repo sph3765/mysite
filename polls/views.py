@@ -15,11 +15,13 @@ from django.urls import reverse
 
 
 def index(request):
+    someVariable = "007jamesbond"
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     latest_employee_list = Employee.objects.all(); 
     context = {
         'latest_question_list': latest_question_list,
         'latest_employee_list' : latest_employee_list, 
+        'someVariable' : someVariable, 
     }
     return render(request, 'polls/index.html', context)
 
