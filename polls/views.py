@@ -9,10 +9,10 @@ import functools
 register = template.Library() 
 
 @register.simple_tag
-def for_each(action, l){
+def for_each(action, l):
     for ele in l:
         action(ele)
-}
+
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
