@@ -33,4 +33,4 @@ class Department(models.Model):
     departmentName = models.CharField(max_length=200)
     employees = models.ManyToManyField(Employee)
     def __str__(self):
-      return self.departName
+      return self.departmentName
