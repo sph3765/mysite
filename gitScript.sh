@@ -1,3 +1,4 @@
 git add *
 git commit -m "a message"
-git push heroku master 
+git push heroku master
+heroku open
