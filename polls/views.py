@@ -73,7 +73,7 @@ def putInDepartment(request, employee_id):
     employeeObject = get_object_or_404(Employee, pk=employee_id)
     dpName = request.POST.get("departmentName")
     newDepartment = Department(departmentName=dpName)
-    #newDepartment.save()
+    newDepartment.save()
 
     #departmentList = Department.objects.all()
 
