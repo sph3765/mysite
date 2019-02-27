@@ -4,14 +4,14 @@ from django.template import loader
 from django.shortcuts import render, get_object_or_404 
 from django.urls import reverse 
 
-from django import template
-import functools
-register = template.Library() 
+# from django import template
+# import functools
+# register = template.Library() 
 
-@register.simple_tag
-def for_each(action, l):
-    for ele in l:
-        action(ele)
+# @register.simple_tag
+# def for_each(action, l):
+#     for ele in l:
+#         action(ele)
 
 
 def index(request):

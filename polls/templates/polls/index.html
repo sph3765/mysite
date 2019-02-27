@@ -1,4 +1,4 @@
-
+{% load poll_extras %}
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
@@ -35,4 +35,10 @@
 {% else %}
   <p>No employees are available</p> 
 {% endif %}
+
+
+{% somevariable = "0000jamesbond000"%}
+<p>{{ somevariable|cut:"0" }}
+
+
 </body> 
