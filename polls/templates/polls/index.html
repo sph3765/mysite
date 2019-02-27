@@ -29,7 +29,7 @@
 {% if latest_employee_list %}
   <ul>
   {% for employee in latest_employee_list %}
-    <li><a href="{% url 'polls:detailEmployee' (lambda x: x)(employee.id) %}">{{ employee.firstName }}</a></li> 
+    <li><a href="{% url 'polls:detailEmployee' employee.id %}">{{ employee.firstName }}</a></li> 
   {% endfor %}
   </ul>
 {% else %}
