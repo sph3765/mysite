@@ -58,4 +58,6 @@ def putInDepartment(request, employee_id):
     newDepartment = Department(departmentName=dpName)
     newDepartment.save()
 
+    
+
     return HttpResponseRedirect(reverse('polls:index'))

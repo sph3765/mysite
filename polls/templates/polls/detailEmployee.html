@@ -6,4 +6,10 @@
   Department Name: <input type="text" name="departmentName"/>
   <input type="submit" value="Submit">
 </form> 
+
+{% department_list = Department.objects.all() %}
+{% for dp in department_list %}
+  <li>{% dp.departmentName %}</li>
+{% endfor %}
+
 <a href="{% url 'polls:index' %}">Homepage</a> 
