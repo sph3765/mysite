@@ -60,4 +60,4 @@ def putInDepartment(request, employee_id):
 
     departmentList = Department.objects.all()
 
-    return HttpResponseRedirect(reverse('polls:index', args=departmentList))
+    return HttpResponseRedirect(reverse('polls:index'))
