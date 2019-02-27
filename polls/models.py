@@ -30,10 +30,23 @@ class Employee(models.Model):
       return self.firstName + " " + self.lastName
 
 class Department(models.Model):
-    id = models.AutoField(primary_key=True)
     departmentName = models.CharField(max_length=200)
-    employees = models.ManyToManyField(Employee)
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
 
 
     def __str__(self):
-      return self.departmentName + ": " + self.id
+      return self.departmentName 
+
+
+# class Company(models.Model):
+#     name = models.CharField(max_length=200)
+
+#     def __str__(self):
+#       return self.name
+
+
+# class Programmer(models.Model):
+#   name = models.CharField(max_length=200)
+#   company = models.ForeignKey(Company, on_delete=models.CASCADE) 
+#   def __str__(self):
+#     return self.name
