@@ -19,7 +19,12 @@ def detail(request, question_id):
 
 def detailEmployee(request, employee_id):
     employee = get_object_or_404(Employee, pk=employee_id)
-    return render(request, 'polls/detailEmployee.html', {'employee': employee})
+    departmentList = Department.objects.all()
+    context = {
+        'employee' : employee,
+        'departmentList' : departmentList, 
+    }
+    return render(request, 'polls/detailEmployee.html', context)
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
