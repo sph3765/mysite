@@ -58,6 +58,6 @@ def putInDepartment(request, employee_id):
     newDepartment = Department(departmentName=dpName)
     newDepartment.save()
 
-    
+    departmentList = Department.objects.all()
 
-    return HttpResponseRedirect(reverse('polls:index'))
+    return HttpResponseRedirect(reverse('polls:index', args=departmentList))

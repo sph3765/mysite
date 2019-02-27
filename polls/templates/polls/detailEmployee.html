@@ -7,8 +7,8 @@
   <input type="submit" value="Submit">
 </form> 
 
-{% department_list = Department.objects.all() %}
-{% for dp in department_list %}
+
+{% for dp in departmenList %}
   <li>{% dp.departmentName %}</li>
 {% endfor %}
 
