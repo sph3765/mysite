@@ -4,6 +4,13 @@ from django.template import loader
 from django.shortcuts import render, get_object_or_404 
 from django.urls import reverse 
 
+from django import template
+import functools
+register = template.Library() 
+
+@register.simple_tag
+map = functools.map
+
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     latest_employee_list = Employee.objects.all(); 
