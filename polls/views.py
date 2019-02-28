@@ -75,7 +75,7 @@ def putInDepartment(request, employee_id):
     newDepartment = Department(departmentName=dpName)
     try:
         newDepartment.save()
-    except():
+    except(KeyError):
         return render(request, 'polls/detailEmployee', {
             'polls:detailEmployee' : employeeObject.id, 
         })
