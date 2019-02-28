@@ -71,15 +71,9 @@ def addEmployee(request):
 
 def putInDepartment(request, employee_id):
     employeeObject = get_object_or_404(Employee, pk=employee_id)
-    
-    try:
-        dpName = request.POST.get("departmentName")
-        newDepartment = Department(departmentName=dpName)
-        newDepartment.save()
-    except(KeyError):
-        return render(request, 'polls/detailEmployee', {
-            'polls:detailEmployee' : employeeObject.id, 
-        })
+   
+    dpName = request.POST.get("departmentName")
+    newDepartment = Department(departmentName=dpName)
+    newDepartment.save()
 
-    else: 
-        return HttpResponseRedirect(reverse('polls:index'))
+    return HttpResponseRedirect(reverse('polls:index'))
