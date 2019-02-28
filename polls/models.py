@@ -31,7 +31,7 @@ class Employee(models.Model):
 
 class Department(models.Model):
     departmentName = models.CharField(max_length=200)
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, default = 1)
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, default = 1, unique = True)
 
 
     def __str__(self):
